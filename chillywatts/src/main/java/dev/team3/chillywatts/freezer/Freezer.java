@@ -10,12 +10,12 @@ public class Freezer {
 
     Freezer(){}
 
-    public Freezer(Integer quantidade, String estadoBorracha, String tecnologia, String tipo, String marca) {
-        this.quantidade = quantidade;
-        this.estadoBorracha = estadoBorracha;
-        this.tecnologia = tecnologia;
-        this.tipo = tipo;
+    public Freezer(String marca, String tipo, String tecnologia, String estadoBorracha, Integer quantidade) {
         this.marca = marca;
+        this.tipo = tipo;
+        this.tecnologia = tecnologia;
+        this.estadoBorracha = estadoBorracha;
+        this.quantidade = quantidade;
     }
 
     public String getMarca() {
@@ -70,5 +70,33 @@ public class Freezer {
     }
 
 
+    public double obterPotencia() {
+        double potencia = (double)0.0F;
+        if (this.tipo.equals("armazenamento") && this.tecnologia.equals("inverter")) {
+            potencia = 0.1;
+        }
 
+        return potencia;
+    }
+
+    public double calcularConsumoTeorico(String epocaAno) {
+        double potencia = this.obterPotencia();
+        double epoca = (double)1.0F;
+        if (epocaAno.equals("verao")) {
+            epoca = 1.2;
+        }
+
+        if (epocaAno.equals("inverno")) {
+            epoca = 0.8;
+        }
+
+        double borracha = (double)1.0F;
+        if (this.estadoBorracha.equals("gasta")) {
+            borracha = (double)1.25F;
+        }
+
+        return this.quantidade > 1 ? potencia * (double)720.0F * epoca * borracha * (double)this.quantidade : potencia * (double)720.0F * epoca * borracha;
+    }
 }
+
+
