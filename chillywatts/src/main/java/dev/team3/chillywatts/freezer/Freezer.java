@@ -1,6 +1,14 @@
 package dev.team3.chillywatts.freezer;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "freezer")
 public class Freezer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String marca;
     private String tipo;

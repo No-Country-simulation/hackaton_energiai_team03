@@ -1,12 +1,19 @@
 package dev.team3.chillywatts.principal;
 
 import dev.team3.chillywatts.freezer.Freezer;
+import dev.team3.chillywatts.repository.FreezerRepository;
 
 import java.util.Scanner;
 
 public class Principal {
 
     private Scanner leitura = new Scanner(System.in);
+
+    private FreezerRepository repositorio;
+
+    public Principal(FreezerRepository repositorio){
+        this.repositorio = repositorio;
+    }
 
     public void exibeMenu() {
         var opcao = -1;
@@ -51,22 +58,27 @@ public class Principal {
         System.out.println("Insira o estado da borracha");
         borracha = this.leitura.nextLine();
 
-        String epoca = "";
-        System.out.println("Insira a epoca do ano");
-        epoca = this.leitura.nextLine();
-
         Integer quant = -1;
         System.out.println("Insira a quantidade");
         quant = this.leitura.nextInt();
 
         Freezer freezer = new Freezer(marca, tipo, tecnologia, borracha, quant);
-        System.out.println(freezer+ "\n");
+        repositorio.save(freezer);
+        System.out.println(freezer + "\n");
 
+    }
+
+/*
+        String epoca = "";
+        System.out.println("Insira a epoca do ano");
+        epoca = this.leitura.nextLine();
         System.out.println("Potencia do freezer é de: " + freezer.obterPotencia() + " kw \n");
 
         double consumo = freezer.calcularConsumoTeorico(epoca);
         System.out.println("Consumo teórico é de: " + consumo + "kw/h \n");
-    }
+
+        */
+
 
 
 }
