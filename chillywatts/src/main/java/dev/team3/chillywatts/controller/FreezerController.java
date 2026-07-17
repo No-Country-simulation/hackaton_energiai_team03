@@ -1,6 +1,6 @@
 package dev.team3.chillywatts.controller;
 
-import dev.team3.chillywatts.freezer.Freezer;
+import dev.team3.chillywatts.entity.Freezer;
 import dev.team3.chillywatts.repository.FreezerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

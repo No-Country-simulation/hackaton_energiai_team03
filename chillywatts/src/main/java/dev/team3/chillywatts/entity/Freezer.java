@@ -1,6 +1,17 @@
-package dev.team3.chillywatts.freezer;
+package dev.team3.chillywatts.entity;
 
+import dev.team3.chillywatts.enums.EstadoBorracha;
+import dev.team3.chillywatts.enums.TecnologiaFreezer;
+import dev.team3.chillywatts.enums.TipoFreezer;
 import jakarta.persistence.*;
+
+/*
+
+    Entidade referente a um freezer, contendo seus atributos importantes para análise de consumo
+    Além da marca que serve mais como um identificador pro usuário diferenciar os freezer.
+
+
+*/
 
 @Entity
 @Table(name = "freezer")
@@ -11,14 +22,18 @@ public class Freezer {
     private Long id;
 
     private String marca;
-    private String tipo;
-    private String tecnologia;
-    private String estadoBorracha;
+
+    @Enumerated(EnumType.STRING)
+    private TipoFreezer tipo;
+    @Enumerated(EnumType.STRING)
+    private TecnologiaFreezer tecnologia;
+    @Enumerated(EnumType.STRING)
+    private EstadoBorracha estadoBorracha;
     private Integer quantidade;
 
     Freezer(){}
 
-    public Freezer(String marca, String tipo, String tecnologia, String estadoBorracha, Integer quantidade) {
+    public Freezer(String marca, TipoFreezer tipo, TecnologiaFreezer tecnologia, EstadoBorracha estadoBorracha, Integer quantidade) {
         this.marca = marca;
         this.tipo = tipo;
         this.tecnologia = tecnologia;
@@ -34,27 +49,27 @@ public class Freezer {
         this.marca = marca;
     }
 
-    public String getTipo() {
+    public TipoFreezer getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoFreezer tipo) {
         this.tipo = tipo;
     }
 
-    public String getTecnologia() {
+    public TecnologiaFreezer getTecnologia() {
         return tecnologia;
     }
 
-    public void setTecnologia(String tecnologia) {
+    public void setTecnologia(TecnologiaFreezer tecnologia) {
         this.tecnologia = tecnologia;
     }
 
-    public String getEstadoBorracha() {
+    public EstadoBorracha getEstadoBorracha() {
         return estadoBorracha;
     }
 
-    public void setEstadoBorracha(String estadoBorracha) {
+    public void setEstadoBorracha(EstadoBorracha estadoBorracha) {
         this.estadoBorracha = estadoBorracha;
     }
 
@@ -78,15 +93,29 @@ public class Freezer {
     }
 
 
+    //Função que retorna o valor de potência baseado no tipo e tecnologia do freezer.
     public double obterPotencia() {
         double potencia = (double)0.0F;
         if (this.tipo.equals("armazenamento") && this.tecnologia.equals("inverter")) {
             potencia = 0.1;
         }
+        if (this.tipo.equals("armazenamento") && this.tecnologia.equals("convencional")) {
+            potencia = 0.15;
+        }
+        if (this.tipo.equals("mostruario") && this.tecnologia.equals("inverter")) {
+            potencia = 0.18;
+        }
+        if (this.tipo.equals("mostruario") && this.tecnologia.equals("convencional")) {
+            potencia = 0.25;
+        }
 
         return potencia;
     }
 
+    /*
+        Funcão que faz o cálculo de consumo teórico do freezer(s), baseado na potência, época do ano,
+        estado da borracha e quantidade.
+    */
     public double calcularConsumoTeorico(String epocaAno) {
         double potencia = this.obterPotencia();
         double epoca = (double)1.0F;

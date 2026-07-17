@@ -1,8 +1,12 @@
 package dev.team3.chillywatts.principal;
 
-import dev.team3.chillywatts.freezer.Freezer;
+import dev.team3.chillywatts.enums.EstadoBorracha;
+import dev.team3.chillywatts.enums.TecnologiaFreezer;
+import dev.team3.chillywatts.enums.TipoFreezer;
+import dev.team3.chillywatts.entity.Freezer;
 import dev.team3.chillywatts.repository.FreezerRepository;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
@@ -10,6 +14,8 @@ public class Principal {
     private Scanner leitura = new Scanner(System.in);
 
     private FreezerRepository repositorio;
+
+    private List<Freezer> freezers;
 
     public Principal(FreezerRepository repositorio){
         this.repositorio = repositorio;
@@ -20,6 +26,7 @@ public class Principal {
         while (opcao != 0) {
             var menu = """
                     1 - Adicionar Freezer
+                    2 - Buscar Freezer por marca
                     0 - Sair                                 
                     """;
 
@@ -32,6 +39,10 @@ public class Principal {
                     addFreezer();
                     break;
 
+                case 2:
+                    buscaPorMarca();
+                    break;
+
                 case 0:
                     System.out.println("Saindo...");
                     break;
@@ -40,6 +51,8 @@ public class Principal {
             }
         }
     }
+
+
 
     private void addFreezer() {
         String marca = "";
@@ -62,10 +75,20 @@ public class Principal {
         System.out.println("Insira a quantidade");
         quant = this.leitura.nextInt();
 
-        Freezer freezer = new Freezer(marca, tipo, tecnologia, borracha, quant);
+        Freezer freezer = new Freezer(marca, TipoFreezer.fromString(tipo), TecnologiaFreezer.fromString(tecnologia), EstadoBorracha.fromString(borracha), quant);
         repositorio.save(freezer);
         System.out.println(freezer + "\n");
 
+    }
+
+    private void buscaPorMarca() {
+        String marcaBusca = "";
+        System.out.println("Insira a marca para buscar");
+        marcaBusca = this.leitura.nextLine();
+
+        freezers = repositorio.findByMarcaContainingIgnoreCase(marcaBusca);
+
+        System.out.println(freezers);
     }
 
 /*

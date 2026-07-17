@@ -1,13 +1,13 @@
 package dev.team3.chillywatts.repository;
 
-import dev.team3.chillywatts.freezer.Freezer;
+import dev.team3.chillywatts.entity.Freezer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
 public interface FreezerRepository extends JpaRepository<Freezer, Long> {
 
-    Optional<Freezer> findByMarcaContainingIgnoreCase(String marca);
+    List<Freezer> findByMarcaContainingIgnoreCase(String marca);
 }
