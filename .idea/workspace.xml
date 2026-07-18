@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="teste add 2">
-      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/entity/Inventario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/controller/FreezerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/controller/FreezerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/freezer/Freezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/entity/Freezer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/principal/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/repository/FreezerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/repository/FreezerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/resources/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/target/classes/dev/team3/chillywatts/freezer/Freezer.class" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/target/classes/dev/team3/chillywatts/freezer/Freezer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/target/classes/dev/team3/chillywatts/principal/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/target/classes/dev/team3/chillywatts/principal/Principal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/entity/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/entity/Inventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/enums/TipoFreezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/enums/TipoFreezer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -89,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784049660867</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="teste add 2">
+      <option name="closed" value="true" />
+      <created>1784290209144</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1784290209144</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

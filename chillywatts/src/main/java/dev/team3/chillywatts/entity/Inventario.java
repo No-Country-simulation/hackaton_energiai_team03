@@ -4,6 +4,12 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+/**
+ * Entity JPA — mapeia a tabela "inventario" no banco de dados.
+ * Armazena o setup de freezers de uma sorveteria (identificada por CNPJ).
+ * Cada CNPJ tem apenas 1 inventário (upsert pelo campo UNIQUE).
+ */
+
 @Entity
 @Table(name = "inventario")
 public class Inventario {

@@ -11,16 +11,16 @@ import com.fasterxml.jackson.annotation.JsonValue;
         Potência esperada: 0,15 kw/h para convencional e 0,10 kw/h para inverter
 */
 public enum TipoFreezer {
-    MOSTRUARIO,
-    ARMAZENAMENTO;
+    ARMAZENAMENTO,
+    EXIBICAO;
 
     /** Converte string do JSON para enum (case-insensitive). Ex: "mostruario" → MOSTRUARIO */
     @JsonCreator
     public static TipoFreezer fromString(String value) {
         if (value == null) return null;
         return switch (value.toLowerCase()) {
-            case "mostruario" -> MOSTRUARIO;
             case "armazenamento" -> ARMAZENAMENTO;
+            case "exibicao" -> EXIBICAO;
             default -> throw new IllegalArgumentException("Tipo de Freezer inválido: " + value);
         };
     }
@@ -29,8 +29,8 @@ public enum TipoFreezer {
     @JsonValue
     public String toJson() {
         return switch (this) {
-            case MOSTRUARIO -> "mostruario";
             case ARMAZENAMENTO -> "armazenamento";
+            case EXIBICAO -> "exibicao";
         };
     }
 }
