@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="teste add 2">
+    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário">
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/AnaliseEnergeticaRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/AnaliseEnergeticaResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/MelhoriaSimulacaoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/enums/HorasAltoConsumo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/entity/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/entity/Inventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/enums/TipoFreezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/enums/TipoFreezer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +92,20 @@
       <option name="project" value="LOCAL" />
       <updated>1784290209144</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário">
+      <option name="closed" value="true" />
+      <created>1784395340100</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784395340100</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="teste add 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste add 2" />
+    <MESSAGE value="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário" />
   </component>
 </project>
