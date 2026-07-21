@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário">
-      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/AnaliseEnergeticaRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/AnaliseEnergeticaResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/MelhoriaSimulacaoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/enums/HorasAltoConsumo.java" afterDir="false" />
+    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="finalizando dtos e horas consumo">
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/repository/AnaliseHistoricoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/AnaliseEnergeticaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/ClassificacaoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/ConsumoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/HistoricoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/InventarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/RecomendacaoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -100,12 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1784395340100</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finalizando dtos e horas consumo">
+      <option name="closed" value="true" />
+      <created>1784571448435</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1784571448435</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="teste add 2" />
     <MESSAGE value="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário" />
+    <MESSAGE value="finalizando dtos e horas consumo" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalizando dtos e horas consumo" />
   </component>
 </project>
