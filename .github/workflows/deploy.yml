@@ -1,0 +1,32 @@
+name: Deploy ChillyWatts to OCI
+
+on:
+  push:
+    branches:
+      - main # Dispara o deploy automático ao atualizar a branch principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      # Configuração do acesso SSH seguro para a instância Compute da Oracle
+      - name: Executar Deploy Remoto via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.OCI_VM_PUBLIC_IP }}
+          username: ubuntu # Utilizador padrão da imagem Ubuntu na OCI
+          key: ${{ secrets.OCI_SSH_PRIVATE_KEY }}
+          script: |
+            # Navega até a pasta do projeto na máquina virtual
+            cd ~/hackaton_energiai_team03
+            
+            # Atualiza o código local da VM com o repositório
+            git pull origin main
+            
+            # Derruba os containers antigos e reconstrói as imagens com o código novo
+            docker compose down
+            docker compose up --build -d
