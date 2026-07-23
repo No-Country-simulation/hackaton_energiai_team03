@@ -25,7 +25,7 @@ jobs:
             cd ~/hackaton_energiai_team03
             
             # Atualiza o código local da VM com o repositório
-            git pull origin main
+            git fetch origin main && git reset --hard origin/main
             
             # Derruba os containers antigos e reconstrói as imagens com o código novo
             docker compose down
