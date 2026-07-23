@@ -19,7 +19,7 @@ jobs:
         with:
           host: ${{ secrets.OCI_VM_PUBLIC_IP }}
           username: ubuntu # Utilizador padrão da imagem Ubuntu na OCI
-          key: ${{ secrets.OCI_SSH_PRIVATE_KEY }}
+          key: ${{ secrets.OCI_VM_SSH_PRIVATE_KEY }}
           script: |
             # Navega até a pasta do projeto na máquina virtual
             cd ~/hackaton_energiai_team03
