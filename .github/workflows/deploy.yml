@@ -15,7 +15,7 @@ jobs:
 
       # Configuração do acesso SSH seguro para a instância Compute da Oracle
       - name: Executar Deploy Remoto via SSH
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.5
         with:
           host: ${{ secrets.OCI_VM_PUBLIC_IP }}
           username: ubuntu # Utilizador padrão da imagem Ubuntu na OCI
