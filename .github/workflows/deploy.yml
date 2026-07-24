@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Configuração do acesso SSH seguro para a instância Compute da Oracle
       - name: Executar Deploy Remoto via SSH
