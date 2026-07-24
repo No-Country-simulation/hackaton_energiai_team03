@@ -29,4 +29,4 @@ joblib.dump(le_estacao, 'le_estacao.pkl')
 joblib.dump(le_pico, 'le_pico.pkl')
 joblib.dump(le_borracha, 'le_borracha.pkl')
 
-print("Modelo de Data Science treinado e salvo com sucesso como 'modelo_chillywatts.pkl'!")
+print("Modelo de Data Science treinado e salvo com sucesso como 'modelo_chillywatts.pkl'!") 
