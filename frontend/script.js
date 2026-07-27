@@ -1,7 +1,8 @@
 // Endpoints do backend
-const API_URL = "http://localhost:8080/analise-energetica";
-const HISTORICO_API = "http://localhost:8080/api/analises/historico";
-const PATCH_API_URL = "http://localhost:8080/api/analises";
+const API_BASE = "http://163.176.254.79:8080";
+const API_URL = `${API_BASE}/analise-energetica`;
+const HISTORICO_API = `${API_BASE}/api/analises/historico`;
+const PATCH_API_URL = `${API_BASE}/api/analises`;
 
 // Marcas disponíveis no select de freezer
 const marcas = [
