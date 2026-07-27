@@ -1,0 +1,52 @@
+name: Deploy ChillyWatts to OCI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy para OCI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Deploy remoto via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.OCI_VM_PUBLIC_IP }}
+          username: ${{ secrets.OCI_SSH_USERNAME }}
+          key: ${{ secrets.OCI_SSH_PRIVATE_KEY }}
+          port: ${{ secrets.OCI_SSH_PORT }}
+          script: |
+            set -e
+
+            echo "=== Informações da VM ==="
+            whoami
+            hostname
+            pwd
+
+            PROJECT_DIR="$HOME/hackaton_energiai_team03"
+
+            if [ ! -d "$PROJECT_DIR" ]; then
+              echo "Primeiro deploy: clonando repositório..."
+              git clone https://github.com/No-Country-simulation/hackaton_energiai_team03.git "$PROJECT_DIR"
+            fi
+
+            cd "$PROJECT_DIR"
+
+            echo "Atualizando código..."
+            git fetch origin main
+            git reset --hard origin/main
+
+            echo "Parando containers antigos..."
+            docker-compose down || true
+
+            echo "Subindo nova versão..."
+            docker-compose up -d --build
+
+            echo "Containers ativos:"
+            docker ps

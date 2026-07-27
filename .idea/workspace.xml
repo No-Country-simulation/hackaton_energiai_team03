@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="adicionando services com leves revisoes">
-      <change afterPath="$PROJECT_DIR$/chillywatts/src/test/java/dev/team3/chillywatts/CenariosSImuladosTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="adicionandp testes de cenarios simulados">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/HealthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/controller/AnaliseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/controller/InventarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chillywatts/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chillywatts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/controller/FreezerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/ml_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/ml_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/modelo_ml.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/modelo_ml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/motor_analise.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/motor_analise.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,18 +61,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ChillywattsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;tiago2&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tiago/Desktop/Tiago/capacitech/hackatonG9/Chilly/hackaton_energiai_team03&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ChillywattsApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Merging tiago2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/tiago/Desktop/Tiago/capacitech/hackatonG9/Chilly/hackaton_energiai_team03"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="" />
@@ -113,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784658459799</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adicionandp testes de cenarios simulados">
+      <option name="closed" value="true" />
+      <created>1785176319652</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785176319652</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,6 +145,7 @@
     <MESSAGE value="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário" />
     <MESSAGE value="finalizando dtos e horas consumo" />
     <MESSAGE value="adicionando services com leves revisoes" />
-    <option name="LAST_COMMIT_MESSAGE" value="adicionando services com leves revisoes" />
+    <MESSAGE value="adicionandp testes de cenarios simulados" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionandp testes de cenarios simulados" />
   </component>
 </project>
