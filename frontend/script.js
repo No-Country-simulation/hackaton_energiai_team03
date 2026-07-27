@@ -777,7 +777,7 @@ adicionarFreezer();
 /* ══════════════════════════════════════
    ── Modal CNPJ (Pre-loader) ──
    ══════════════════════════════════════ */
-const INVENTARIO_API = "http://localhost:8080/api/inventario";
+const INVENTARIO_API = `${API_BASE}/api/inventario`;
 let cnpjAtual = null;
 let inventarioAtualId = null;
 
