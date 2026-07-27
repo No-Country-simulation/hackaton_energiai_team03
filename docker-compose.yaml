@@ -28,10 +28,14 @@ services:
       - "8080:8080" # Porta pública que o frontend vai consumir
     depends_on:
       - ml-service
+      - db
     environment:
       - SPRING_PROFILES_ACTIVE=prod
       # O backend vai consumir a IA usando o nome do serviço no formato DNS do Docker
       - ML_SERVICE_URL=http://ml-service:5000
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/chillywatts_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 30s
@@ -54,3 +58,23 @@ services:
       timeout: 10s
       retries: 5
     restart: always
+  
+  db:
+    image: mysql:8.4
+    container_name: chillywatts-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: chillywatts_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+volumes:
+  mysql_data:
