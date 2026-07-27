@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="adicionandp testes de cenarios simulados">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/AnaliseEnergeticaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/AnaliseEnergeticaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/HistoricoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/HistoricoService.java" afterDir="false" />
+    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="pequenas correcoes service">
+      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/InventarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/InventarioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785176609754</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="pequenas correcoes service">
+      <option name="closed" value="true" />
+      <created>1785177410651</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785177410651</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -138,7 +144,9 @@
     <MESSAGE value="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário" />
     <MESSAGE value="finalizando dtos e horas consumo" />
     <MESSAGE value="adicionando services com leves revisoes" />
+    <MESSAGE value="Merge branch 'main' of github.com:No-Country-simulation/hackaton_energiai_team03 into tiago2" />
     <MESSAGE value="adicionandp testes de cenarios simulados" />
-    <option name="LAST_COMMIT_MESSAGE" value="adicionandp testes de cenarios simulados" />
+    <MESSAGE value="pequenas correcoes service" />
+    <option name="LAST_COMMIT_MESSAGE" value="pequenas correcoes service" />
   </component>
 </project>
