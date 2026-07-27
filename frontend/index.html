@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1e56c0" />
+    <meta name="description" content="ChillyWatts - Análise energética inteligente para sorveterias. Descubra seu perfil de consumo e receba recomendações personalizadas." />
+    <title>ChillyWatts - Análise Energética para Sorveterias</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Theme Toggle -->
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+      <i data-lucide="sun" class="icon-sun"></i>
+      <i data-lucide="moon" class="icon-moon"></i>
+    </button>
+
+    <div id="snowfall"></div>
+
+    <!-- Landing Page -->
+    <div id="landingPage" class="lp">
+      <div class="lp-content">
+        <div class="lp-logo">
+          <i data-lucide="ice-cream-cone" class="logo-icon"></i>
+          <h1 class="lp-title">ChillyWatts</h1>
+        </div>
+        <p class="lp-subtitle">
+          Economia energética para sorveterias inteligentes
+        </p>
+
+        <div class="lp-features">
+          <div class="lp-feature">
+            <div class="lp-feature-icon"><i data-lucide="bar-chart-3"></i></div>
+            <div>
+              <strong>Análise energética</strong>
+              <p>Descubra o perfil de consumo da sua sorveteria</p>
+            </div>
+          </div>
+          <div class="lp-feature">
+            <div class="lp-feature-icon"><i data-lucide="lightbulb"></i></div>
+            <div>
+              <strong>Recomendações personalizadas</strong>
+              <p>Dicas práticas para reduzir sua conta de luz</p>
+            </div>
+          </div>
+          <div class="lp-feature">
+            <div class="lp-feature-icon"><i data-lucide="cog"></i></div>
+            <div>
+              <strong>Simulação de melhorias</strong>
+              <p>Veja quanto pode economizar com cada mudança</p>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="lp-cta" onclick="abrirModalCnpj()">
+          <i data-lucide="rocket"></i>
+          Fazer análise
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal CNPJ -->
+    <div id="cnpjModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="cnpjModalTitle">
+      <div class="modal-content cnpj-modal-content">
+        <!-- Tela 1: Informar CNPJ -->
+        <div id="cnpjTela1" class="cnpj-modal-body">
+          <div class="cnpj-modal-icon">
+            <i data-lucide="store"></i>
+          </div>
+          <h2 id="cnpjModalTitle">Bem-vindo ao ChillyWatts</h2>
+          <p class="cnpj-modal-subtitle">
+            Informe o CNPJ da sua sorveteria para começar
+          </p>
+          <div class="cnpj-input-group">
+            <input
+              type="text"
+              id="cnpjInput"
+              placeholder="00.000.000/0000-00"
+              maxlength="18"
+              autofocus
+            />
+            <button type="button" id="cnpjBtn" onclick="confirmarCnpj()">
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+          <div id="cnpjMsg" class="cnpj-msg hidden"></div>
+          <p class="cnpj-modal-hint">
+            Se já possui inventário, os dados serão carregados automaticamente.
+          </p>
+          <button type="button" class="cnpj-skip-btn" onclick="pularCnpj()">
+            Fazer análise sem CNPJ
+          </button>
+        </div>
+
+        <!-- Tela 2: Criar setup (só freezers) -->
+        <div id="cnpjTela2" class="cnpj-modal-body hidden">
+          <div class="cnpj-modal-icon">
+            <i data-lucide="settings"></i>
+          </div>
+          <h2>Crie seu setup</h2>
+          <p class="cnpj-modal-subtitle">
+            Configure os freezers da sua sorveteria
+          </p>
+          <div id="setupFreezerContainer" class="setup-freezer-list"></div>
+          <button
+            type="button"
+            class="setup-add-btn"
+            onclick="adicionarSetupFreezer()"
+          >
+            <i data-lucide="plus"></i> Adicionar freezer
+          </button>
+          <div class="setup-actions">
+            <button type="button" class="cnpj-skip-btn" onclick="pularSetup()">
+              Cancelar
+            </button>
+            <button
+              type="button"
+              class="setup-save-btn"
+              onclick="salvarSetup()"
+            >
+              Salvar setup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container hidden" id="mainContainer">
+      <header>
+        <button
+          type="button"
+          id="btnMeuInventario"
+          class="inventario-btn hidden"
+          onclick="abrirInventario()"
+        >
+          <i data-lucide="package" style="width: 18px; height: 18px"></i> Meu
+          Inventário
+        </button>
+        <div class="logo">
+          <i data-lucide="ice-cream-cone" class="logo-icon"></i> ChillyWatts
+        </div>
+        <p class="tagline">Economia energética para sorveterias inteligentes</p>
+      </header>
+
+      <main>
+        <form id="analiseForm">
+          <div class="form-group">
+            <label for="nomeResponsavel"> Nome do responsável </label>
+            <input type="text" id="nomeResponsavel" placeholder="Ex: João" />
+          </div>
+
+          <div class="form-group">
+            <label for="consumoKwh">
+              Consumo na conta de luz (kWh)
+              <span
+                class="tooltip"
+                data-tip="Valor total de kWh que aparece na sua conta de luz mensal."
+                >?</span
+              >
+            </label>
+            <input
+              type="number"
+              id="consumoKwh"
+              placeholder="Ex: 450"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="usoHorarioPico">
+                Abastece entre 18h e 21h?
+                <span
+                  class="tooltip"
+                  data-tip="Horário de pico tarifário. Abrir portas e abastecer nesse período encarece a conta."
+                  >?</span
+                >
+              </label>
+              <select id="usoHorarioPico" required>
+                <option value="false">Não</option>
+                <option value="true">Sim</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="horasAltoConsumo">
+                Intensidade de movimento
+                <span
+                  class="tooltip"
+                  data-tip="Nível de movimento da sorveteria: quantas horas por dia os freezers ficam com portas abertas."
+                  >?</span
+                >
+              </label>
+              <select id="horasAltoConsumo" required>
+                <option value="Baixo">Baixo (0-4h)</option>
+                <option value="Médio" selected>Médio (5-7h)</option>
+                <option value="Alto">Alto (8h+)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="epocaAno">
+              Época do ano
+              <span
+                class="tooltip"
+                data-tip="Estação do ano influencia o consumo. Verão = mais movimento, Inverno = menos movimento."
+                >?</span
+              >
+            </label>
+            <select id="epocaAno" required>
+              <option value="Verão">Verão</option>
+              <option value="Inverno">Inverno</option>
+              <option value="Primavera">Primavera</option>
+              <option value="Outono">Outono</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Freezers
+              <span
+                class="tooltip"
+                data-tip="Cadastre cada tipo de freezer da sorveteria. Ex: 3 exibição Convencional + 2 estoque Inverter."
+                >?</span
+              >
+            </label>
+            <div id="freezersContainer"></div>
+            <button type="button" id="addFreezer" class="btn-add">
+              + Adicionar Freezer
+            </button>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            <span class="btn-text">Analisar</span>
+            <span class="btn-loading">Analisando...</span>
+          </button>
+        </form>
+
+        <div id="resultado" class="resultado hidden" aria-live="polite">
+          <h2>Resultado da Análise</h2>
+          <div class="cards">
+            <div class="card" id="cardCategoria">
+              <span class="card-label">Perfil Energético</span>
+              <div class="gauge-container">
+                <svg class="gauge-svg" viewBox="0 0 120 70">
+                  <defs>
+                    <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="var(--gauge-color-start, #16a34a)" />
+                      <stop offset="100%" stop-color="var(--gauge-color-end, #22c55e)" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    class="gauge-track"
+                    d="M 15 60 A 45 45 0 0 1 105 60"
+                    fill="none"
+                    stroke="#e2e8f0"
+                    stroke-width="8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    class="gauge-fill"
+                    id="gaugeFill"
+                    d="M 15 60 A 45 45 0 0 1 105 60"
+                    fill="none"
+                    stroke="url(#gaugeGradient)"
+                    stroke-width="8"
+                    stroke-linecap="round"
+                    stroke-dasharray="141.37"
+                    stroke-dashoffset="141.37"
+                  />
+                </svg>
+                <div class="gauge-value" id="gaugeValue">0%</div>
+              </div>
+              <p id="categoria"></p>
+            </div>
+            <div class="card card-custo" id="cardCusto">
+              <span class="card-label">Gasto Mensal</span>
+              <p id="custo"></p>
+              <span class="card-sub" id="custoDiario"></span>
+            </div>
+            <div class="card card-economia" id="cardEconomia">
+              <span class="card-label">Economia Potencial</span>
+              <p id="economiaReais"></p>
+              <span class="card-sub" id="economiaKwh"></span>
+            </div>
+          </div>
+
+          <div class="recomendacoes">
+            <h3>Recomendações</h3>
+            <ul id="listaRecomendacoes"></ul>
+            <button
+              id="btnSimulacao"
+              class="btn-simulacao hidden"
+              onclick="
+                abrirModalSimulacao(
+                  chatState.ultimaAnalise,
+                  chatState.ultimoRequest,
+                )
+              "
+            >
+              <i data-lucide="sparkles" style="width: 16px; height: 16px"></i>
+              Simular Melhorias
+            </button>
+          </div>
+        </div>
+
+        <div class="exemplos">
+          <span class="exemplos-label">Teste rápido:</span>
+          <button
+            type="button"
+            onclick="carregarExemplo(1)"
+            class="ex-btn eficiente"
+          >
+            Eficiente
+          </button>
+          <button
+            type="button"
+            onclick="carregarExemplo(2)"
+            class="ex-btn moderado"
+          >
+            Moderado
+          </button>
+          <button
+            type="button"
+            onclick="carregarExemplo(3)"
+            class="ex-btn ineficiente"
+          >
+            Ineficiente
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal de Simulação -->
+    <div id="simulacaoModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="simulacaoModalTitle">
+      <div class="modal-content modal-sim">
+        <div class="modal-header">
+          <div>
+              <h2 id="simulacaoModalTitle">
+              <i
+                data-lucide="sparkles"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  vertical-align: middle;
+                  margin-right: 6px;
+                "
+              ></i>
+              Simular Melhorias
+            </h2>
+            <p class="modal-subtitle">
+              Aplique recomendações e veja o impacto no custo
+            </p>
+          </div>
+          <button class="modal-close" onclick="fecharModal()" aria-label="Fechar modal">✕</button>
+        </div>
+        <div class="modal-body">
+          <!-- Resumo atual -->
+          <div class="sim-resumo" id="simResumo">
+            <div class="sim-resumo-item">
+              <span class="sim-resumo-label">Custo Atual</span>
+              <span class="sim-resumo-valor" id="simCustoAtual">—</span>
+            </div>
+            <div class="sim-resumo-item">
+              <span class="sim-resumo-label">Perfil</span>
+              <span class="sim-resumo-valor" id="simPerfilAtual">—</span>
+            </div>
+            <div class="sim-resumo-item">
+              <span class="sim-resumo-label">Freezers</span>
+              <span class="sim-resumo-valor" id="simQtdFreezers">—</span>
+            </div>
+          </div>
+
+          <!-- Melhorias disponíveis -->
+          <div class="sim-section">
+            <h3 class="sim-section-title">Melhorias Disponíveis</h3>
+            <p class="sim-section-desc">
+              Ative as melhorias que deseja aplicar
+            </p>
+            <div id="simMelhorias"></div>
+          </div>
+
+          <!-- Freezers (edição avançada) -->
+          <div class="sim-section">
+            <div class="sim-section-header" onclick="toggleFreezersAvancado()">
+              <h3 class="sim-section-title">Configuração dos Freezers</h3>
+              <i
+                data-lucide="chevron-down"
+                style="
+                  width: 16px;
+                  height: 16px;
+                  color: #888;
+                  transition: transform 0.2s;
+                "
+                id="iconFreezersAvancado"
+              ></i>
+            </div>
+            <div
+              id="simFreezersAvancado"
+              class="sim-freezers-avancado hidden"
+            ></div>
+          </div>
+
+          <!-- Comparação -->
+          <div class="simulacao-comparacao hidden" id="simulacaoComparacao">
+            <div class="comparacao-grid">
+              <div class="comparacao-col comparacao-antes">
+                <span class="comparacao-label">Antes</span>
+                <p class="comparacao-custo" id="antesCusto">—</p>
+              </div>
+              <div class="comparacao-seta">→</div>
+              <div class="comparacao-col comparacao-depois">
+                <span class="comparacao-label">Depois</span>
+                <p class="comparacao-custo" id="depoisCusto">—</p>
+              </div>
+            </div>
+            <div
+              class="comparacao-economia hidden"
+              id="comparacaoEconomia"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar: Meu Inventário -->
+    <div
+      id="inventarioOverlay"
+      class="inventario-overlay hidden"
+      onclick="fecharInventario()"
+    ></div>
+    <div id="inventarioSidebar" class="inventario-sidebar hidden" role="dialog" aria-modal="true" aria-label="Inventário de freezers">
+      <div class="inventario-sidebar-header">
+        <h2>
+          <i
+            data-lucide="package"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 8px;
+            "
+          ></i>
+          Meu Inventário
+        </h2>
+        <button
+          type="button"
+          class="inventario-close"
+          onclick="fecharInventario()"
+          aria-label="Fechar inventário"
+        >
+          ✕
+        </button>
+      </div>
+      <p class="inventario-subtitle">Edite os freezers da sua sorveteria</p>
+      <div
+        id="inventarioFreezerContainer"
+        class="inventario-freezer-list"
+      ></div>
+      <button
+        type="button"
+        class="inventario-add-btn"
+        onclick="adicionarInventarioFreezer()"
+      >
+        <i data-lucide="plus" style="width: 16px; height: 16px"></i> Adicionar
+        freezer
+      </button>
+      <div class="inventario-actions">
+        <button
+          type="button"
+          class="inventario-save-btn"
+          onclick="salvarInventario()"
+        >
+          Salvar
+        </button>
+      </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot">
+      <button id="chatbotToggle" class="chatbot-toggle hidden" aria-label="Abrir assistente virtual">
+        <i data-lucide="message-square"></i>
+      </button>
+      <div id="chatbotWindow" class="chatbot-window hidden">
+        <div class="chatbot-header">
+          <div class="chatbot-header-left">
+            <i data-lucide="bot" style="width: 18px; height: 18px"></i>
+            <span>Assistente ChillyWatts</span>
+          </div>
+          <button id="chatbotClose" class="chatbot-close" aria-label="Fechar assistente virtual">✕</button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages" role="log" aria-live="polite" aria-label="Mensagens do assistente"></div>
+        <div class="chatbot-input-area">
+          <input
+            type="text"
+            id="chatbotInput"
+            placeholder="Digite sua mensagem..."
+            autocomplete="off"
+          />
+          <button id="chatbotSend" class="chatbot-send">➤</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
