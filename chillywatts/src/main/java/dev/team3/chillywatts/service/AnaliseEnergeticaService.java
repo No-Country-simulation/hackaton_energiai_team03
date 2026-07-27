@@ -110,7 +110,7 @@ public class AnaliseEnergeticaService {
     }
 
     /** Busca análises salvas por CNPJ - delega para HistóricoService. */
-    public List<AnaliseHistorico> buscaHistoricoPorCnpj(String cnpj) {
+    public List<AnaliseHistorico> buscarHistoricoPorCnpj(String cnpj) {
         return historicoService.buscarHistoricoPorCnpj(cnpj);
     }
 
@@ -120,5 +120,5 @@ public class AnaliseEnergeticaService {
     }
 
     /** lista todas as análises salvas - delega para HistóricoService. */
-    public List<AnaliseHistorico> listarTodosHistóricos() { return historicoService.listarTodosHistoricos();}
+    public List<AnaliseHistorico> listarTodosHistoricos() { return historicoService.listarTodosHistoricos();}
 }
