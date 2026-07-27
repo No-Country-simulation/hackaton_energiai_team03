@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afdb3e77-4719-40a3-bbca-9bc06080c327" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/controller/AnaliseController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/controller/InventarioController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/dto/AnaliseEnergeticaRequestDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/dto/AnaliseEnergeticaResponseDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/dto/FreezerItemDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/dto/MelhoriaSimulacaoDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/entity/AnaliseHistorico.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/entity/Freezer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/entity/Inventario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/CategoriaEnergetica.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/EpocaAno.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/HorasAltoConsumo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/repository/InventarioRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/dev/team3/chillywatts/ChillywattsApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/team3/chillywatts/controller/AnaliseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/team3/chillywatts/controller/AnaliseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/team3/chillywatts/controller/InventarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/team3/chillywatts/controller/InventarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/ChillywattsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/ChillywattsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/config/OpenApiConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/config/OpenApiConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/controller/FreezerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/EstadoBorracha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/EstadoBorracha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/TecnologiaFreezer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/TecnologiaFreezer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/TipoFreezer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/TipoFreezer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/freezer/Freezer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/principal/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/principal/Principal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/repository/FreezerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/repository/FreezerRepository.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sybzinha&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/No-Country-simulation/hackaton_energiai_team03.git&quot;,
+    &quot;accountId&quot;: &quot;819ff152-6146-4590-8f03-b26489a2028d&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3GGBmkqOXaN0cTWMAMCQjGiEKuA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;syb-front&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sybilla Coppi/Desktop/backup/hackaton_energiai_team03/chillywatts&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afdb3e77-4719-40a3-bbca-9bc06080c327" name="Changes" comment="" />
+      <created>1783588186210</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783588186210</updated>
+    </task>
+    <servers />
+  </component>
+</project>
