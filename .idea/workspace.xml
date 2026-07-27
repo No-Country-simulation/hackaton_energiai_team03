@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário">
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/AnaliseEnergeticaRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/AnaliseEnergeticaResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/dto/MelhoriaSimulacaoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/enums/HorasAltoConsumo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Tiago-Lindner&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:No-Country-simulation/hackaton_energiai_team03.git&quot;,
+    &quot;accountId&quot;: &quot;72d32f0d-a90d-4045-aefc-0ed04c8a4933&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3GSle3NMaluWrIheS7D0uAHGpzl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ChillywattsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;tiago2&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tiago/Desktop/Tiago/capacitech/hackatonG9/Chilly/hackaton_energiai_team03&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="" />
+      <created>1783972942572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783972942572</updated>
+    </task>
+    <task id="LOCAL-00001" summary="teste add 2">
+      <option name="closed" value="true" />
+      <created>1783973713609</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783973713609</updated>
+    </task>
+    <task id="LOCAL-00002" summary="teste add 2">
+      <option name="closed" value="true" />
+      <created>1784049660867</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1784049660867</updated>
+    </task>
+    <task id="LOCAL-00003" summary="teste add 2">
+      <option name="closed" value="true" />
+      <created>1784290209144</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1784290209144</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário">
+      <option name="closed" value="true" />
+      <created>1784395340100</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784395340100</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="teste add 2" />
+    <MESSAGE value="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit corrigindo nomes enum tipoFreezer&#10;E entity inventário" />
+  </component>
+</project>
