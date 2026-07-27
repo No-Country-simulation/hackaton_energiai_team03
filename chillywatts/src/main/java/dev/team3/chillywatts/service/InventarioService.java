@@ -15,7 +15,7 @@ import java.util.Optional;
 @Service
 public class InventarioService {
 
-    Autowired
+    @Autowired
     private InventarioRepository inventarioRepository;
 
     /** Busca inventário pelo CNPJ. Retorna vazio se não existe. */

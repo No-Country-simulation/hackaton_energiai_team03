@@ -25,7 +25,7 @@ public class AnaliseEnergeticaService {
     private ConsumoService consumoService;
 
     @Autowired
-    private ClsssificacaoService classificacaoService;
+    private ClassificacaoService classificacaoService;
 
     @Autowired
     private RecomendacaoService recomendacaoService;
