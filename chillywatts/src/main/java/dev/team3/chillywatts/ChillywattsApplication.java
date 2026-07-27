@@ -23,7 +23,7 @@ public class ChillywattsApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Principal principal = new Principal(repositorio);
-        principal.exibeMenu();
+        //principal.exibeMenu();
 
     }
 
