@@ -38,3 +38,19 @@ services:
       timeout: 10s
       retries: 5
     restart: always
+  # O frontend em Nginx
+  frontend-service:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: chillywatts-frontend
+    ports:
+      - "80:80" # Porta pública que o usuário vai acessar
+    depends_on:
+      - backend-service
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: always
