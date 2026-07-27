@@ -61,13 +61,30 @@ def analisar_cliente(dados_cliente):
 # RNF04: OS 3 CENÁRIOS OBRIGATÓRIOS PARA OS JURADOS
 # ==========================================
 cenarios_teste = [
-    {"estabelecimentoId": "loja_eficiente_01", "estacao_ano": "Inverno", "uso_horario_pico": "Baixo", "quantidade_equipamentos": 4, "tipo_predominante": "Armazenamento", "tecnologia_predominante": "Inverter", "estado_borracha": "Integra", "consumo_real_kwh": 310.0},
-    {"estabelecimentoId": "loja_moderado_02", "estacao_ano": "Primavera", "uso_horario_pico": "Medio", "quantidade_equipamentos": 5, "tipo_predominante": "Exibicao", "tecnologia_predominante": "Inverter", "estado_borracha": "Integra", "consumo_real_kwh": 750.0},
-    {"estabelecimentoId": "loja_ineficiente_03", "estacao_ano": "Verao", "uso_horario_pico": "Alto", "quantidade_equipamentos": 7, "tipo_predominante": "Exibicao", "tecnologia_predominante": "Convencional", "estado_borracha": "Gasta", "consumo_real_kwh": 1850.0}
+    {
+        "descricao_jurados": "Cenário 1: Loja Eficiente (Inverter, Baixo Pico, Borracha Íntegra)",
+        "estabelecimentoId": "loja_eficiente_01", "estacao_ano": "Inverno", "uso_horario_pico": "Baixo", "quantidade_equipamentos": 4, "tipo_predominante": "Armazenamento", "tecnologia_predominante": "Inverter", "estado_borracha": "Integra", "consumo_real_kwh": 310.0
+    },
+    {
+        "descricao_jurados": "Cenário 2: Loja Moderada (Uso no horário de pico precisa de atenção)",
+        "estabelecimentoId": "loja_moderado_02", "estacao_ano": "Primavera", "uso_horario_pico": "Medio", "quantidade_equipamentos": 5, "tipo_predominante": "Exibicao", "tecnologia_predominante": "Inverter", "estado_borracha": "Integra", "consumo_real_kwh": 750.0
+    },
+    {
+        "descricao_jurados": "Cenário 3: Loja Crítica (Motor Convencional, Alto Pico e Borracha Gasta)",
+        "estabelecimentoId": "loja_ineficiente_03", "estacao_ano": "Verao", "uso_horario_pico": "Alto", "quantidade_equipamentos": 7, "tipo_predominante": "Exibicao", "tecnologia_predominante": "Convencional", "estado_borracha": "Gasta", "consumo_real_kwh": 1850.0
+    }
 ]
 
+print("\n" + "="*60)
 print("--- EXIBINDO OS 3 CENÁRIOS DE TESTE EXIGIDOS (RNF04) ---")
+print("="*60)
+
 for cenario in cenarios_teste:
+    # Tira a descrição do dicionário só para imprimir bonito, sem quebrar sua função
+    descricao = cenario.pop("descricao_jurados")
+    
+    print(f"\n>>> AVALIANDO: {descricao}")
+    
     resultado = analisar_cliente(cenario)
     print(json.dumps(resultado, indent=4, ensure_ascii=False))
-    print("-" * 50)
+    print("-" * 60)
