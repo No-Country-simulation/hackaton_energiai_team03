@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="aaa">
-      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/AnaliseEnergeticaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/service/AnaliseEnergeticaService.java" afterDir="false" />
+    <list default="true" id="68d967c1-5af7-4312-9daf-75b63b0c68ad" name="Changes" comment="correcoes p/controller">
+      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/entity/Freezer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/principal/Principal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chillywatts/src/main/java/dev/team3/chillywatts/repository/FreezerRepository.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +159,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785178167207</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="correcoes p/controller">
+      <option name="closed" value="true" />
+      <created>1785180270191</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1785180270191</updated>
+    </task>
+    <task id="LOCAL-00013" summary="correcoes p/controller">
+      <option name="closed" value="true" />
+      <created>1785180275315</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1785180275315</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -169,6 +187,7 @@
     <MESSAGE value="adicionandp testes de cenarios simulados" />
     <MESSAGE value="pequenas correcoes service" />
     <MESSAGE value="aaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aaa" />
+    <MESSAGE value="correcoes p/controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="correcoes p/controller" />
   </component>
 </project>
