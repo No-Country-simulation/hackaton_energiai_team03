@@ -11,8 +11,17 @@ le_borracha = joblib.load('le_borracha.pkl')
 
 # Função analítica para processar um estabelecimento
 def analisar_cliente(dados_cliente):
-    # RN02.2 - Cálculo Teórico
-    potencia = 0.25 if dados_cliente['tipo_predominante'] == 'Exibicao' and dados_cliente['tecnologia_predominante'] == 'Convencional' else 0.18
+    # RN02.2 - Cálculo Teórico (compatível com gerador_dados.py)
+    tipo = dados_cliente['tipo_predominante']
+    tec = dados_cliente['tecnologia_predominante']
+    if tipo == 'Exibicao' and tec == 'Convencional':
+        potencia = 0.25
+    elif tipo == 'Exibicao' and tec == 'Inverter':
+        potencia = 0.18
+    elif tipo == 'Armazenamento' and tec == 'Convencional':
+        potencia = 0.15
+    else:
+        potencia = 0.10
     fator = 1.25 if dados_cliente['estado_borracha'] == 'Gasta' else 1.0
     consumo_teorico = round(dados_cliente['quantidade_equipamentos'] * (potencia * 24 * 30 * fator), 2)
     
