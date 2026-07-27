@@ -5,6 +5,7 @@ import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.Contact;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * Configuração do Swagger/OpenAPI.
@@ -24,5 +25,9 @@ public class OpenApiConfig {
                         .contact(new Contact()
                                 .name("Equipe ChillyWatts")
                                 .email("contato@chillywatts.com")));
+    }
+    @Bean  
+    public RestTemplate restTemplate() {  
+        return new RestTemplate();  
     }
 }
