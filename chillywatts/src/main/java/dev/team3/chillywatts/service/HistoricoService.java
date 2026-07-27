@@ -30,7 +30,7 @@ public class HistoricoService {
      * Usado pelo chatbot depois que o usuário informa seus dados pessoais.
      * Lança RuntimeException se o ID não for encontrado
      */
-    public AnaliseHistorico atualizarNomeCpnj(Long id, String nome, String cnpj) {
+    public AnaliseHistorico atualizarNomeCnpj(Long id, String nome, String cnpj) {
         AnaliseHistorico historico = analiseHistoricoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Análise não encontrada com id: " + id));
         historico.setNome(nome);
