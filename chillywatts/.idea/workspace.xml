@@ -5,38 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afdb3e77-4719-40a3-bbca-9bc06080c327" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/controller/AnaliseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/controller/InventarioController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/dto/AnaliseEnergeticaRequestDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/dto/AnaliseEnergeticaResponseDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/dto/FreezerItemDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/dto/MelhoriaSimulacaoDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/entity/AnaliseHistorico.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/entity/Freezer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/entity/Inventario.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/CategoriaEnergetica.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/EpocaAno.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/HorasAltoConsumo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/repository/InventarioRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/dev/team3/chillywatts/ChillywattsApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/team3/chillywatts/controller/AnaliseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/team3/chillywatts/controller/AnaliseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/team3/chillywatts/controller/InventarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/team3/chillywatts/controller/InventarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/ChillywattsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/ChillywattsApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/config/OpenApiConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/config/OpenApiConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/controller/FreezerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/EstadoBorracha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/EstadoBorracha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/TecnologiaFreezer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/TecnologiaFreezer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/TipoFreezer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/enums/TipoFreezer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/freezer/Freezer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/principal/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/principal/Principal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/repository/FreezerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/team3/chillywatts/repository/FreezerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +59,19 @@
       <option name="presentableId" value="Default" />
       <updated>1783588186210</updated>
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <option name="closed" value="true" />
+      <created>1785179886139</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1785179886139</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
