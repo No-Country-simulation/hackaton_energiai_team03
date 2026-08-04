@@ -32,7 +32,7 @@
 
 ## 🎯 Sobre o Projeto
 
-O **ChillyWatts** é uma plataforma de análise energética desenvolvida para resolver a falta de visibilidade sobre o desperdício elétrico em **sorveterias** — estabelecimentos com operações intensivas de refrigeração que consomem grande parte da energia no sistema de congelação e exposição de sorvetes.
+O **ChillyWatts** é uma plataforma de análise energética desenvolvida para resolver a falta de visibilidade sobre o desperdício elétrico em **sorveterias**  estabelecimentos com operações intensivas de refrigeração que consomem grande parte da energia no sistema de congelação e exposição de sorvetes.
 
 A aplicação combina **Data Science** e infraestrutura na **Oracle Cloud (OCI)** para cruzar dados operacionais (como inventário de freezers, sazonalidade e consumo em horários de pico), calculando o consumo teórico esperado e diagnosticando o perfil energético da sorveteria.
 
