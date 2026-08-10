@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡🍦 ChillyWatts
+# ⚡🍦 ChillyWatts 
 
 ### Economia energética para sorveterias inteligentes
 
